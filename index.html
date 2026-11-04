@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reel Pick – what should I watch tonight?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Reel Pick</h1>
+      <p>Choose a mood, set your limits, and get one film to watch tonight.</p>
+    </header>
+
+    <section class="controls" aria-label="Filters">
+      <fieldset>
+        <legend>Genres</legend>
+        <div id="genres" class="chips"></div>
+      </fieldset>
+
+      <div class="row">
+        <label>Length
+          <select id="runtime">
+            <option value="">Any length</option>
+            <option value="100">Under 100 min</option>
+            <option value="130">Under 130 min</option>
+          </select>
+        </label>
+        <label>Minimum rating
+          <select id="rating">
+            <option value="0">Any</option>
+            <option value="6" selected>6+</option>
+            <option value="7">7+</option>
+            <option value="8">8+</option>
+          </select>
+        </label>
+        <button id="suggest" class="primary">Pick a movie</button>
+      </div>
+    </section>
+
+    <section id="result" aria-live="polite"></section>
+
+    <section class="watchlist">
+      <h2>Watchlist</h2>
+      <ul id="watchlist"></ul>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
